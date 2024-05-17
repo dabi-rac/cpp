@@ -6,7 +6,7 @@
 /*   By: dabi-rac <dabi-rac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:41:20 by dabi-rac          #+#    #+#             */
-/*   Updated: 2024/05/17 15:14:37 by dabi-rac         ###   ########.fr       */
+/*   Updated: 2024/05/17 17:29:19 by dabi-rac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 ClapTrap::ClapTrap(std::string name)
 {
+     std::cout  << "ClapTrap " <<  this->_name  << "created" << std::endl;
+    
     this->_name = name;
     this->_hitPoints = 10;
     this->_energyPoints = 10;
@@ -61,8 +63,31 @@ void ClapTrap::Announce(void)
 
 }
 
-
 ClapTrap::ClapTrap(const ClapTrap& otherClapTrap)
 {
     *this = otherClapTrap;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& otherClapTrap)
+{
+    this->_name = otherClapTrap._name;
+    this->_hitPoints = otherClapTrap._hitPoints;
+    this->_energyPoints = otherClapTrap._energyPoints;
+    this->_attackDamage = otherClapTrap._attackDamage;
+    return *this;
+}
+
+int ClapTrap::getHitPoints(void)
+{
+    return this->_hitPoints;
+}
+
+int ClapTrap::getEnergyPoints(void)
+{
+    return this->_energyPoints;
+}
+
+int ClapTrap::getAttackDamage(void)
+{
+    return this->_attackDamage;
 }
