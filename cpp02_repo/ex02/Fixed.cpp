@@ -6,7 +6,7 @@
 /*   By: dabi-rac <dabi-rac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 20:03:12 by dabi-rac          #+#    #+#             */
-/*   Updated: 2024/05/16 20:12:26 by dabi-rac         ###   ########.fr       */
+/*   Updated: 2024/05/17 10:05:31 by dabi-rac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ this->_Value = raw;
 
 Fixed::Fixed()
  {
-    std::cout << "Default ccosntr. used" << std::endl;
+    // std::cout << "Default ccosntr. used" << std::endl;
     this->_Value = 0;
     
  }
 
 
 Fixed& Fixed::operator=(const Fixed &anotherFixedpoint) {
-        std::cout << "Copy assignment operator used" << std::endl;
+        // std::cout << "Copy assignment operator used" << std::endl;
     if (this != &anotherFixedpoint) {
         this->_Value = anotherFixedpoint.getRawBits();
     }
@@ -41,23 +41,23 @@ Fixed& Fixed::operator=(const Fixed &anotherFixedpoint) {
 
 
 Fixed::Fixed(const Fixed &anotherFixedpoint) {
-    std::cout << "Copy consr. used" << std::endl;
+    // std::cout << "Copy consr. used" << std::endl;
     this->setRawBits(anotherFixedpoint.getRawBits());
 }
 
 
 
 Fixed::~Fixed() {
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const int value) {
-    std::cout << "Int constructor used" << std::endl;
+    // std::cout << "Int constructor used" << std::endl;
     this->_Value = value << this->_Bits;
 }
 
 Fixed::Fixed(const float value) {
-    std::cout << "Float constructor used" << std::endl;
+    // std::cout << "Float constructor used" << std::endl;
     this->_Value = roundf(value * (1 << this->_Bits));
 }
 
