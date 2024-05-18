@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dabi-rac <dabi-rac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 18:00:43 by dabi-rac          #+#    #+#             */
-/*   Updated: 2024/05/15 21:44:18 by dabi-rac         ###   ########.fr       */
+/*   Created: 2024/05/14 14:58:36 by dabi-rac          #+#    #+#             */
+/*   Updated: 2024/05/16 18:39:07 by dabi-rac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Fixed.hpp"
 
-#include "Contact.hpp"
 
-class PhoneBook
-{
-private:
-    Contact     _contacts[8];
-    int         _readInput(void) const;
-public:
-    PhoneBook();
-    ~PhoneBook();
-    void    addContact(void);
-    void    printContacts(void) const;
-    void    search(void) const;
-    void    started(void) const;
-};
+int main() {
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
 
-#endif 
+    c = b;
 
+    std::cout << a.getRawBits() << std::endl;
+std::cout << b.getRawBits() << std::endl;
+std::cout << c.getRawBits() << std::endl;
+
+    
+    return 0;
+}
