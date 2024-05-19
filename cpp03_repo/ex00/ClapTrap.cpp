@@ -6,7 +6,7 @@
 /*   By: dabi-rac <dabi-rac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:41:20 by dabi-rac          #+#    #+#             */
-/*   Updated: 2024/05/17 15:14:37 by dabi-rac         ###   ########.fr       */
+/*   Updated: 2024/05/18 20:29:24 by dabi-rac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,4 @@ void ClapTrap::Announce(void)
     }
     std::cout  << this->_name << " has " << this->_hitPoints << " points of health!"    << std::endl;
 
-}
-
-
-ClapTrap::ClapTrap(const ClapTrap& otherClapTrap)
-{
-    *this = otherClapTrap;
 }
